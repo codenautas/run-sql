@@ -8,10 +8,17 @@
   "main": "triage-esV.js",
   "files": [ "lib" ],
   "dependencies": {
-    "fs-extra": "~0.26.5",
+    "commander": "~2.9.0",
+    "es6-shim": "0.35.0",
+    "es6-transpiler": "0.7.18",
+    "fs-extra": "~0.26.7",
     "fs-promise": "~0.5.0",
+    "lodash": "~4.7.0",
     
-    "promise-plus": "~0.2.4"
+    "best-globals": "~0.2.4",
+    "mini-tools": "~0.2.7",
+    "pg-promise-strict": "~0.2.3",
+    "promise-plus": "~0.0.6"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
@@ -25,6 +32,7 @@
     "test": "mocha --reporter spec --bail --check-leaks test/",
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "postinstall": "node install/transpile.js",
     "start": "node triage-esV.js"
   },
   "jshintConfig": {
