@@ -11,10 +11,13 @@ var Path = require('path');
 
 entrypoints.forEach(function(entrypoint){
     console.log('transpiling...',entrypoint.name);
-    require('es6-transpiler').run({
+    var result = require('es6-transpiler').run({
         filename: Path.dirname(__dirname)+'/'+entrypoint.path+'/'+entrypoint.name,
         outputFilename: Path.dirname(__dirname)+'/'+entrypoint.path+'-trans/'+entrypoint.name
     });
+    if(result.errors.length){
+        console.log(result.errors);
+    }
 });
 
 

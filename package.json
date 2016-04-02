@@ -1,7 +1,7 @@
 {
   "name": "run-sql",
   "description": "run sql sentences from the command line",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "repository": "codenautas/run-sql",
   "license": "MIT",
