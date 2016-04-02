@@ -1,7 +1,7 @@
 {
   "name": "run-sql",
   "description": "run sql sentences from the command line",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "repository": "codenautas/run-sql",
   "license": "MIT",
@@ -33,6 +33,7 @@
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
     "postinstall": "node install/transpile.js",
+    "example": "node triage-esV.js --dir example --command \"select cbrt(125) as cubic_root_of_125\"",
     "start": "node triage-esV.js"
   },
   "jshintConfig": {
