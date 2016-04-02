@@ -1,0 +1,56 @@
+{
+  "name": "run-sql",
+  "description": "run sql sentences from the command line",
+  "version": "0.0.1",
+  "author": "Codenautas <codenautas@googlegroups.com>",
+  "repository": "codenautas/run-sql",
+  "license": "MIT",
+  "main": "triage-esV.js",
+  "files": [ "lib" ],
+  "dependencies": {
+    "fs-extra": "~0.26.5",
+    "fs-promise": "~0.5.0",
+    
+    "promise-plus": "~0.2.4"
+  },
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "istanbul": "~0.4.2",
+    "mocha": "~2.4.5"
+  },
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "start": "node triage-esV.js"
+  },
+  "jshintConfig": {
+    "asi": false,
+    "forin": true,
+    "curly": true,
+    "esversion": 6
+  },
+  "eslintConfig": {
+    "env": {
+      "node": false
+    },
+    "rules": {
+      "strict": 0,
+      "no-console": 1,
+      "no-unused-vars": 1
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    }
+  },
+  "qa-control": {
+    "package-version": "0.2.0",
+    "coverage": 0,
+    "run-in": "server",
+    "stability": "extending",
+    "type": "cmd-tool"
+  }
+}
